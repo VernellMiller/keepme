@@ -35,9 +35,9 @@ app.use(
         saveUninitialized: false,
     })
     );
-    app.use(methodOverride("_method"))
-    app.use("/sessions", sessionController);
-    app.use("/users", userController);
+app.use(methodOverride("_method"))
+app.use("/sessions", sessionController);
+app.use("/users", userController);
 
 
 
@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
         currentUser: req.session.currentUser,
       })
     } else {
-      res.render("index.ejs", {
+      res.render("dashboard.ejs", {
         currentUser: req.session.currentUser,
       })
     }
