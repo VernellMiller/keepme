@@ -38,6 +38,7 @@ app.use(
 app.use(methodOverride("_method"))
 app.use("/sessions", sessionController);
 app.use("/users", userController);
+const Game = require("./models/game")
 
 
 
@@ -59,8 +60,11 @@ app.get("/", (req, res) => {
   });
 
 
-// New Route
 
+// New Route
+app.get("/new", (req, res) => {
+  res.render("new.ejs")
+});
 
 
 // Delete Route
@@ -75,7 +79,7 @@ app.get("/", (req, res) => {
 
 // Create Route
 app.post("/games", (req, res) => {
-  res.send("received")
+  res.send("req.body")
 });
 
 
