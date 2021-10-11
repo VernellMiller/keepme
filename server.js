@@ -74,7 +74,9 @@ app.get("/", (req, res) => {
 
 
 // Create Route
-
+app.post("/games", (req, res) => {
+  res.send("received")
+});
 
 
 
