@@ -17,6 +17,44 @@
 
     <h1>Dashboard</h1>
 
+    <h1>Day</h1>
+
+    <div>Tuesday</div>
+
+    <div>Wednesday</div>
+
+    <div>Thursday</div>
+
+
+
+    <div id="g1">
+
+      
+        <% games.forEach(game => { %>
+        <p><a href="/games/<%=game._id; %>"> <%=game.teamName; %></a></p>
+        <p><%=game.teamColor; %></p>
+        <p><%=game.gameField; %></p>
+        <a href="/new">+</a>
+        <a href="/new">e</a>
+        <a href="/new">x</a>
+        <% }) %>
+      
+
+        
+    </div>
+
+    <div id="g2"></div>
+
+    <div id="g3"></div>
+
+    <div id="g4"></div>
+
+    <div id="g5"></div>
+
+    <div id="g6"></div>
+    
+
+
   </body>
   
 </html>
