@@ -26,6 +26,9 @@
     <div>Thursday</div>
 
 
+    <a href="/new">Add Game</a>
+
+
 
     <div id="g1">
 
@@ -35,7 +38,12 @@
         <p><%=game.teamColor; %></p>
         <p><%=game.gameField; %></p>
         <a href="/new">+</a>
-        <a href="/new">e</a>
+        <a href="/games/<%=game._id %>/edit">e</a>
+
+        <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
+          <input type="submit" value="x" />
+        </form>
+
         <a href="/new">x</a>
         <% }) %>
       
