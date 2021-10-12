@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Document</title>
+
+    </head>
+
+
+    <body>
+        <form action="/games/<%=game._id%>?_method=PUT" method="POST">
+
+            <input type="text" name="teamName" placeholder="name"value="<%=game.teamName; %>"/><br />
+
+			<input type="text" name="teamCaptain" placeholder="captain" value="<%=game.teamCaptain; %>"/><br />
+
+			<input type="text" name="teamColor" placeholder="color" value="<%=game.teamColor; %>"/><br />
+
+			<input type="text" name="division" placeholder="division" value="<%=game.division; %>"/><br />
+
+            <input type="text" name="gameTime" placeholder="time" value="<%=game.gameTime; %>"/><br />
+
+            <input type="text" name="gameField" placeholder="field" value="<%=game.gameField; %>"/><br />
+
+			<input type="submit" name="" value="edit game"/>
+        
+        </form>
+        
+    </body>
+
+</html>

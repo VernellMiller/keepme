@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const userController = require("./controllers/users");
 const session = require("express-session");
 const sessionController = require("./controllers/sessions");
-const methodOverride = require("method-override")
+const methodOverride = require("method-override");
 
 // Initialize express App
 const app = express();
@@ -35,10 +35,10 @@ app.use(
         saveUninitialized: false,
     })
     );
-app.use(methodOverride("_method"))
+app.use(methodOverride("_method"));
 app.use("/sessions", sessionController);
 app.use("/users", userController);
-const Game = require("./models/game")
+const Game = require("./models/game");
 
 
 
@@ -77,14 +77,27 @@ app.get("/new", (req, res) => {
 
 
 // Delete Route
-// app.delete("/games/:id", (req, res) => {
-//   res.send("deleting...")
-// })
+app.delete("/games/:id", (req, res) => {
+  Game.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect("/")
+  });
+});
 
 
 
 // Update Route
-
+app.put("/games/:id", (req, res) => {
+  Game.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {
+      new: true,
+    },
+    (error, updatedGame) => {
+      res.redirect(`/games/${req.params.id}`)
+    }
+  )
+});
 
 
 
@@ -107,13 +120,13 @@ app.post("/", (req, res) => {
 
 
 // Edit Route
-// app.get("/games/:id/edit", (req, res) => {
-//     Game.findById(req.params.id, (error, foundgame) => {
-//       res.render("edit.ejs", {
-//        game: foundGame,
-//      });
-//   });
-// });
+app.get("/games/:id/edit", (req, res) => {
+    Game.findById(req.params.id, (error, foundGame) => {
+      res.render("edit.ejs", {
+       game: foundGame,
+     });
+  });
+});
 
 
 
