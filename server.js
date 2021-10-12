@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userController = require("./controllers/users");
 const session = require("express-session");
-const sessionController = require("./controllers/sessions")
+const sessionController = require("./controllers/sessions");
 const methodOverride = require("method-override")
 
 // Initialize express App
@@ -48,18 +48,27 @@ const Game = require("./models/game")
 
 // Index route
 app.get("/", (req, res) => {
-    if (req.session.currentUser) {
-      res.render("dashboard.ejs", {
-        currentUser: req.session.currentUser,
-      })
-    } else {
-      res.render("dashboard.ejs", {
-        currentUser: req.session.currentUser,
-      })
-    }
+
+  Game.find({}, (error, allGames) => {
+    res.render("dashboard.ejs", {
+      games: allGames,
+    currentUser: req.session.currentUser,
+
+    });
   });
+});
+
+  //   if (req.session.currentUser) {
+  //     res.render("dashboard.ejs", {
+  //       currentUser: req.session.currentUser,
+  //     })
+  //   }
+     
+    
+  // });
 
 
+  
 
 // New Route
 app.get("/new", (req, res) => {
@@ -68,7 +77,9 @@ app.get("/new", (req, res) => {
 
 
 // Delete Route
-
+// app.delete("/games/:id", (req, res) => {
+//   res.send("deleting...")
+// })
 
 
 
@@ -78,20 +89,44 @@ app.get("/new", (req, res) => {
 
 
 // Create Route
-app.post("/games", (req, res) => {
-  res.send("req.body")
+app.post("/", (req, res) => {
+  Game.create(req.body, (error, createdGame) => {
+    res.redirect("/") 
+
+  });
 });
+
+// app.get("/games", (req, res) => {
+//   Game.find({}, (error, allGames) => {
+//     res.render("index.ejs", {
+//        games: allGames,
+//     });
+//   });
+// });
 
 
 
 // Edit Route
-
+// app.get("/games/:id/edit", (req, res) => {
+//     Game.findById(req.params.id, (error, foundgame) => {
+//       res.render("edit.ejs", {
+//        game: foundGame,
+//      });
+//   });
+// });
 
 
 
 
 // Show Route
-
+app.get("/games/:id", (req, res) => {
+  Game.findById(req.params.id, (err, foundGame) => {
+    res.render("show.ejs", {
+      game: foundGame,
+    });
+  });
+});
+  
 
 
 
