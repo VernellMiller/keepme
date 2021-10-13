@@ -25,10 +25,12 @@
     <h1>KEEPME</h1>
 
     </header>
-
+    
     <div id="bg"></div>
-
+    
+    <h1 id="title">DAYS</h1>
     <Main>
+      
 
       <article id="days">
         <p>date</p>
@@ -48,9 +50,13 @@
       
     </Main>
     
-    <a href="/new">Add Game</a>
+    <article id="addGame">
 
-    <div id="g1">
+      <a href="/new">Add Game</a>
+
+    </article>
+
+    <article id="g1">
 
       
         <% games.forEach(game => { %>
@@ -65,30 +71,11 @@
         </form>
         <% }) %>
       
-
-        
-    </div>
+    </article>
 
     <footer>
       Copyright &copy; KEEPME <span id="year"></span> All Rights Reserved
     </footer>
-
-
-
-
-
-
-    <div id="g2"></div>
-
-    <div id="g3"></div>
-
-    <div id="g4"></div>
-
-    <div id="g5"></div>
-
-    <div id="g6"></div>
-    
-
 
   </body>
   
