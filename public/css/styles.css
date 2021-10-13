@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    /* border: 1px dotted red; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #212121;
+    color: white;
+    margin: 0;
+}
+
+header, footer {
+    display: flex;
+    align-items: center;
+    height: 3.125rem;
+}
+
+header {
+    background-color: #212121;
+    color: white;
+    box-shadow: 1px 1px 5px 3px #000000;
+    padding-left: 1rem;
+}
+
+footer {
+    justify-content: center;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    width: 18.75;
+    height: 9.375rem;
+    border-radius: 10px;
+
+}

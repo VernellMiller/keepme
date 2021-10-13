@@ -27,6 +27,7 @@ db.on("error", (error) => {
 });
 
 // Mount Middleware
+app.use(express.static('public'));
 app.use(express.urlencoded({extended:false}));
 app.use(
     session({
