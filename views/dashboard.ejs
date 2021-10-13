@@ -14,36 +14,49 @@
 
   <body>
 
-    
-    <header>
+    <nav>
+      
       <%- include('./partials/nav.ejs') %>
+
+    </nav>
+
+    <header>
       
     <h1>KEEPME</h1>
 
     </header>
-
+    
+    <div id="bg"></div>
+    
+    <h1 id="title">DAYS</h1>
     <Main>
+      
 
-      <article>
+      <article id="days">
         <p>date</p>
-        <h5>Tuesday</h5>
+        <h3>Tuesday</h3>
       </article>
 
-      <article>
+      <article id="days">
         <p>date</p>
-        <h5>Wednesday</h5>
+        <h3>Wednesday</h3>
       </article>
 
-      <article>
+      <article id="days">
         <p>date</p>
-        <h5>Thursday</h5>
+        <h3>Thursday</h3>
       </article>
+
+      
+    </Main>
+    
+    <article id="addGame">
 
       <a href="/new">Add Game</a>
 
-    </Main>
+    </article>
 
-    <div id="g1">
+    <article id="g1">
 
       
         <% games.forEach(game => { %>
@@ -58,30 +71,11 @@
         </form>
         <% }) %>
       
-
-        
-    </div>
+    </article>
 
     <footer>
       Copyright &copy; KEEPME <span id="year"></span> All Rights Reserved
     </footer>
-
-
-
-
-
-
-    <div id="g2"></div>
-
-    <div id="g3"></div>
-
-    <div id="g4"></div>
-
-    <div id="g5"></div>
-
-    <div id="g6"></div>
-    
-
 
   </body>
   
