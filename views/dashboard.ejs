@@ -62,7 +62,7 @@
         <a href="/games/<%=game._id %>/edit">e</a>
   
          <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
-          <input type="submit" value="sub out" />
+          <input id="delete" type="submit" value="sub out" />
         </form>
   
           <% }) %>
@@ -72,7 +72,7 @@
 
         
       </Main>
-      
+
       <article id="addGame">
   
         <a href="/new">Add Game</a>
