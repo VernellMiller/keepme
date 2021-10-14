@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: white;
-    color: white;
+    color: black;
     margin: 0;
 }
 
@@ -33,15 +33,17 @@ header, footer {
 }
 
 header {
-    background-color: #212121;
+    background-color: black;
     color: white;
     box-shadow: 1px 1px 5px 3px #000000;
     padding-left: 1rem;
     justify-content: center;
+    /* margin-bottom: -20px; */
 }
 
 footer {
     justify-content: center;
+    margin-top: 10px;
 }
 
 main {
@@ -51,8 +53,9 @@ main {
     justify-content: center;
 }
 
-#title {
+.title {
     margin: -5rem 1rem 0rem 3rem;
+    color: white;
 }
 
 #days {
@@ -70,5 +73,29 @@ main {
 }
 
 #g1 {
-    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 2rem 1rem 1rem 1rem;
+    width: 10.75rem;
+    min-height: 100px;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    background-color: #212121;
+    box-shadow: 2px 3px 5px 3px #111111;
+    padding: 20px;
+}
+
+a:link {
+    text-decoration: none;
+  }
+
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:active {
+    text-decoration: underline;
 }

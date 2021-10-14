@@ -28,49 +28,56 @@
     
     <div id="bg"></div>
     
-    <h1 id="title">DAYS</h1>
+    <h1 class="title">WHAT A DAY!</h1>
+
     <Main>
       
 
       <article id="days">
-        <p>date</p>
-        <h3>Tuesday</h3>
+        <p style="margin: -10px 0 50px 60px;">date</p>
+        <h1>Tuesday</h1>
       </article>
 
       <article id="days">
-        <p>date</p>
-        <h3>Wednesday</h3>
+        <p style="margin: -10px 0 50px 95px;">date</p>
+        <h1>Wednesday</h1>
       </article>
 
       <article id="days">
-        <p>date</p>
-        <h3>Thursday</h3>
+        <p style="margin: -10px 0 50px 75px;">date</p>
+        <h1>Thursday</h1>
       </article>
 
       
     </Main>
     
+    
+    <% games.forEach(game => { %>
+
+    <article id="g1">
+
+      <p style="margin: 0;"><%=game.gameTime; %></p>
+
+      <h2 style="margin: 0; font-size: 30px;"><a href="/games/<%=game._id; %>"> <%=game.teamName; %></a></h2>
+
+      <p style="margin: 0; font-size: 20px;"><%=game.teamColor; %> | <%=game.gameField; %></p>
+
+      
+      <a href="/new">+</a>
+      <a href="/games/<%=game._id %>/edit">e</a>
+
+       <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="x" />
+      </form>
+
+        <% }) %>
+      
+    </article>
+
     <article id="addGame">
 
       <a href="/new">Add Game</a>
 
-    </article>
-
-    <article id="g1">
-
-      
-        <% games.forEach(game => { %>
-        <p><a href="/games/<%=game._id; %>"> <%=game.teamName; %></a></p>
-        <p><%=game.teamColor; %></p>
-        <p><%=game.gameField; %></p>
-        <a href="/new">+</a>
-        <a href="/games/<%=game._id %>/edit">e</a>
-
-        <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
-          <input type="submit" value="x" />
-        </form>
-        <% }) %>
-      
     </article>
 
     <footer>
