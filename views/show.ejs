@@ -35,32 +35,37 @@
 
             <article id="days">
               <p style="margin: -10px 0 50px 60px;">date</p>
-              <h1>Tuesday</h1>
+              <h1 style=" color: #8CD46F;">Tuesday</h1>
             </article>
       
             <article id="days">
               <p style="margin: -10px 0 50px 95px;">date</p>
-              <h1>Wednesday</h1>
+              <h1 style=" color: #8CD46F;">Wednesday</h1>
             </article>
       
             <article id="days">
               <p style="margin: -10px 0 50px 75px;">date</p>
-              <h1>Thursday</h1>
+              <h1 style="color: #8CD46F; ">Thursday</h1>
             </article>
       
             
-          </Main>
+            <article id="g1">
+    
+            <h1 style="margin-top: -10px; color: #8CD46F;"><%=game.teamName; %></h1>
+            <p style="margin: -5px 0 15px 0;"><%=game.teamCaptain; %></p>
+            <p style="margin: -10px 0 15px 0;"><%=game.teamColor; %></p>
+            <p style="margin: -10px 0 15px 0;"><%=game.division; %></p>
+            <p style="margin: -10px 0 15px 0;"><%=game.gameTime; %></p>
+            <p style="margin: -10px 0 15px 0;"><%=game.gameField; %></p>
+    
+            </article>
+
+        </Main>
 
 
-        <h1>DAY</h1>
-
-
-        <p><%=game.teamName; %></p>
-        <p><%=game.teamCaptain; %></p>
-        <p><%=game.teamColor; %></p>
-        <p><%=game.division; %></p>
-        <p><%=game.gameTime; %></p>
-        <p><%=game.gameField; %></p>
+        <footer>
+          Copyright &copy; KEEPME <span id="year"></span> All Rights Reserved
+        </footer>
         
     </body>
 
