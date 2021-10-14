@@ -18,9 +18,11 @@ Just enter a little bit of info on your team, time and place and we're ready to 
     - HTML
     - CSS
     - JavaScript
+    - Express
     - EJS
+    - LUCIDAPP
     - Adobe Illustrator
-    - Adobe XD
+    - Adobe XD.
 
 # Screenshots:
 <center><strong> WIREFRAME </strong></center>
