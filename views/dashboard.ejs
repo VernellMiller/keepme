@@ -22,7 +22,8 @@
 
     <header>
       
-    <h1>KEEPME</h1>
+    <h1 id="head1">KEEP</h1>
+    <h1 id="head2">ME</h1>
 
     </header>
     
@@ -59,15 +60,16 @@
   
         <p style="margin: 0; font-size: 20px;"><%=game.teamColor; %> | <%=game.gameField; %></p>
   
-        <a href="/games/<%=game._id %>/edit">e</a>
+        <a href="/games/<%=game._id %>/edit"><button style="background-color: #52A9FF;">edit</button></a>
   
          <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
           <input id="delete" type="submit" value="sub out" />
         </form>
-  
-        <% }) %>
-
+     
       </article>
+  
+      <% }) %>
+
 
         
       </Main>

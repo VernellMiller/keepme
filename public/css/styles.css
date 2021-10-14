@@ -34,9 +34,9 @@ header, footer {
 }
 
 header {
-    background-color: black;
-    color: white;
-    box-shadow: 1px 1px 5px 3px #000000;
+    /* background-color: black; */
+    color: #8C88EC;
+    /* box-shadow: 1px 1px 5px 3px #000000; */
     padding-left: 1rem;
     justify-content: center;
     /* margin-bottom: -20px; */
@@ -45,6 +45,14 @@ header {
 footer {
     justify-content: center;
     margin-top: 100px;
+}
+
+#head1 {
+    color:#52A9FF;
+}
+
+#head2 {
+    color: #FF6144;
 }
 
 main {
@@ -84,7 +92,7 @@ main {
     border-radius: 10px;
     /* border: 1px solid black; */
     /* background-color: #212121; */
-    color: white;
+    color: #8C88EC;
     box-shadow: 2px 3px 5px 3px #6e6e6e;
     padding: 20px;
 }
