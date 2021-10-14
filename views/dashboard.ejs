@@ -49,34 +49,38 @@
       </article>
 
       
-    </Main>
-    
-    
-    <% games.forEach(game => { %>
+      <% games.forEach(game => { %>
+  
+      <article id="g1">
+  
+        <p style="margin: 0;"><%=game.gameTime; %></p>
+  
+        <h2 style="margin: 0; font-size: 30px;"><a href="/games/<%=game._id; %>"> <%=game.teamName; %></a></h2>
+  
+        <p style="margin: 0; font-size: 20px;"><%=game.teamColor; %> | <%=game.gameField; %></p>
+  
+        <a href="/games/<%=game._id %>/edit">e</a>
+  
+         <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
+          <input type="submit" value="sub out" />
+        </form>
+  
+          <% }) %>
 
-    <article id="g1">
+          
+        </article>
 
-      <p style="margin: 0;"><%=game.gameTime; %></p>
-
-      <h2 style="margin: 0; font-size: 30px;"><a href="/games/<%=game._id; %>"> <%=game.teamName; %></a></h2>
-
-      <p style="margin: 0; font-size: 20px;"><%=game.teamColor; %> | <%=game.gameField; %></p>
-
-      <a href="/games/<%=game._id %>/edit">e</a>
-
-       <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
-        <input type="submit" value="x" />
-      </form>
-
-        <% }) %>
+        
+      </Main>
       
-    </article>
+      <article id="addGame">
+  
+        <a href="/new">Add Game</a>
+  
+      </article>
+    
+    
 
-    <article id="addGame">
-
-      <a href="/new">Add Game</a>
-
-    </article>
 
     <footer>
       Copyright &copy; KEEPME <span id="year"></span> All Rights Reserved
