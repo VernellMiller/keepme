@@ -34,9 +34,9 @@ header, footer {
 }
 
 header {
-    background-color: black;
-    color: white;
-    box-shadow: 1px 1px 5px 3px #000000;
+    /* background-color: black; */
+    color: #8C88EC;
+    /* box-shadow: 1px 1px 5px 3px #000000; */
     padding-left: 1rem;
     justify-content: center;
     /* margin-bottom: -20px; */
@@ -47,6 +47,14 @@ footer {
     margin-top: 100px;
 }
 
+#head1 {
+    color:#52A9FF;
+}
+
+#head2 {
+    color: #FF6144;
+}
+
 main {
     flex-grow: 1;
     display: flex;
@@ -55,7 +63,7 @@ main {
 }
 
 .title {
-    margin: -5rem 1rem 0rem 3rem;
+    margin: -8rem 1rem 0rem 3rem;
     color: white;
 }
 
@@ -68,8 +76,9 @@ main {
     height: 9.375rem;
     border-radius: 10px;
     /* border: 1px solid black; */
-    background-color: #212121;
-    box-shadow: 2px 3px 5px 3px #111111;
+    /* background-color: #212121; */
+    box-shadow: 2px 3px 5px 3px #6e6e6e;
+    color: white;
 
 }
 
@@ -82,9 +91,14 @@ main {
     min-height: 100px;
     border-radius: 10px;
     /* border: 1px solid black; */
-    background-color: #212121;
-    box-shadow: 2px 3px 5px 3px #111111;
+    /* background-color: #212121; */
+    color: #8C88EC;
+    box-shadow: 2px 3px 5px 3px #6e6e6e;
     padding: 20px;
+}
+
+#delete {
+    background-color: #FF6144;
 }
 
 a:link {
