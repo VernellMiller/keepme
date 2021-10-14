@@ -7,12 +7,51 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="stylesheet" href="/css/styles.css">
         <title>Document</title>
 
     </head>
 
 
     <body>
+
+        <nav>
+
+            <a href="/"><</a>
+  
+        </nav>
+
+        <header>
+      
+            <h1>KEEPME</h1>
+        
+        </header>
+            
+        <div id="bg"></div>
+
+        <h1 class="title">Select A Day</h1>
+
+        <Main>
+      
+
+            <article id="days">
+              <p style="margin: -10px 0 50px 60px;">date</p>
+              <h1>Tuesday</h1>
+            </article>
+      
+            <article id="days">
+              <p style="margin: -10px 0 50px 95px;">date</p>
+              <h1>Wednesday</h1>
+            </article>
+      
+            <article id="days">
+              <p style="margin: -10px 0 50px 75px;">date</p>
+              <h1>Thursday</h1>
+            </article>
+      
+            
+          </Main>
+
         <form action="/games/<%=game._id%>?_method=PUT" method="POST">
 
             <input type="text" name="teamName" placeholder="name"value="<%=game.teamName; %>"/><br />
@@ -27,9 +66,13 @@
 
             <input type="text" name="gameField" placeholder="field" value="<%=game.gameField; %>"/><br />
 
-			<input type="submit" name="" value="edit game"/>
+			<input type="submit" name="" value="SUB IN"/>
         
         </form>
+
+        <footer>
+            Copyright &copy; KEEPME <span id="year"></span> All Rights Reserved
+        </footer>
         
     </body>
 
