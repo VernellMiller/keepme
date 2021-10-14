@@ -62,8 +62,6 @@
 
       <p style="margin: 0; font-size: 20px;"><%=game.teamColor; %> | <%=game.gameField; %></p>
 
-      
-      <a href="/new">+</a>
       <a href="/games/<%=game._id %>/edit">e</a>
 
        <form action="/games/<%= game._id %>?_method=DELETE" method="POST">
