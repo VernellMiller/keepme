@@ -32,7 +32,7 @@ Just enter a little bit of info on your team, time and place and we're ready to 
 
 # Getting Started:
 
-[Click here](https://vernellmiller.github.io/My-Top-Five/) to see the deployed project.
+[Click here](https://quiet-scrubland-19641.herokuapp.com/) to see the deployed project.
 
 
 # Future Enhancements :
